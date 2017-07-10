@@ -27,7 +27,7 @@ public class CleanApplication extends Application {
                .build();
     }
 
-    // Branch test
+    // Branch tes
     public ApplicationComponent getCleanApplication(){
         return applicationComponent;
     }
