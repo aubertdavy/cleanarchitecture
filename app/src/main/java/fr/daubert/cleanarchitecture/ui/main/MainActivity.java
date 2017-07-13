@@ -58,11 +58,12 @@ public class MainActivity extends BaseActivity implements CalendarsView {
 
         calendarsPresenter.onAttachView(this);
         calendarsPresenter.load();
+
+        Toast.makeText(getBaseContext(), getString(R.string.hello_world), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void showCalendars(List<Calendar> calendars) {
-        // notifyDataSetChanged() on adapter
     }
 
     @Override
@@ -77,7 +78,7 @@ public class MainActivity extends BaseActivity implements CalendarsView {
     }
 
     @Override
-    public void swhoLoading() {
+    public void showLoading() {
 
     }
 }

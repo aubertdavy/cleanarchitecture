@@ -2,6 +2,7 @@
     <!-- Global -->
     <string name="app_name">CleanArchitecture</string>
     <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello World !!</string>
     <!-- Event item view -->
     <string name="summary">Summary: %s</string>
     <string name="organizer">Organizer: %s</string>

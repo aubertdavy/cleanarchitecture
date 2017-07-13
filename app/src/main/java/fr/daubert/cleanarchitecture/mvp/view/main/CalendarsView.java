@@ -12,5 +12,5 @@ import fr.daubert.cleanarchitecture.mvp.view.View;
 public interface CalendarsView extends View {
     void showCalendars(List<Calendar> calendars);
     void showError(Throwable throwable);
-    void swhoLoading();
+    void showLoading();
 }

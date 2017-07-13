@@ -2,6 +2,8 @@ package fr.daubert.cleanarchitecture.mvp.presenter.main;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import fr.daubert.cleanarchitecture.mvp.model.Calendar;
 import fr.daubert.cleanarchitecture.mvp.presenter.Presenter;
 import fr.daubert.cleanarchitecture.mvp.view.main.CalendarsView;
@@ -21,19 +23,19 @@ public class CalendarsPresenter implements Presenter<CalendarsView> {
     private Subscription subscription;
     private Retrofit retrofit;
 
+    @Inject
     public CalendarsPresenter(Retrofit retrofit){
         this.retrofit = retrofit;
     }
 
     public void load(){
+        calendarsView.showLoading();
         subscription = retrofit.create(MainApi.class).getCalendars()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(new Subscriber<List<Calendar>>() {
                 @Override
-                public void onCompleted() {
-
-                }
+                public void onCompleted() {}
 
                 @Override
                 public void onError(Throwable e) {
